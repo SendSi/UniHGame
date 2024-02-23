@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1334" opaque="false" designImageAlpha="20" designImageLayer="1">
+  <controller name="gameCtrl" pages="0,,1," selected="0">
+    <remark page="0" value="菜单"/>
+    <remark page="1" value="游戏1"/>
+  </controller>
+  <displayList>
+    <component id="n101_xoe1" name="funcListEles" src="xoe1mz" fileName="components/FuncListEles.xml" xy="160,1228" size="590,110" group="n109_pwz3">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+    <component id="n123_shxm" name="outBtn" src="j4kdhz9clt" fileName="components/main_btn_back.xml" xy="16,1210" size="106,108" group="n109_pwz3">
+      <gearDisplay controller="gameCtrl" pages="0"/>
+      <Button title="Go out"/>
+    </component>
+    <group id="n109_pwz3" name="bottomEles" xy="16,1210" size="734,128" advanced="true">
+      <gearDisplay controller="gameCtrl" pages="0"/>
+    </group>
+    <component id="n34_b6o0" name="topEles" src="xoe1n2" fileName="components/TopEles.xml" xy="0,0" size="750,150">
+      <gearDisplay controller="gameCtrl" pages="0"/>
+      <relation target="" sidePair="rightext-right"/>
+    </component>
+    <component id="n154_quts" name="rightTeam" src="le3m1qp8vhq" fileName="components/main_team_right.xml" xy="526,156">
+      <gearDisplay controller="gameCtrl" pages="0"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </component>
+    <component id="n174_eh3a" name="leftTask" src="xoe1n0" fileName="components/main_taskitem.xml" xy="6,153" size="208,347" controller="hideOpen,0">
+      <gearDisplay controller="gameCtrl" pages="0"/>
+    </component>
+  </displayList>
+  <transition name="quit" options="2">
+    <item time="0" type="Alpha" target="n101_xoe1" value="1"/>
+    <item time="0" type="Alpha" target="n154_quts" value="1"/>
+    <item time="0" type="Alpha" target="n174_eh3a" value="1"/>
+    <item time="0" type="XY" target="n101_xoe1" tween="true" startValue="744,644" endValue="714,644" duration="3" ease="Linear"/>
+    <item time="0" type="XY" target="n154_quts" tween="true" startValue="1113,138" endValue="1084,138" duration="3" ease="Linear"/>
+    <item time="0" type="XY" target="n174_eh3a" tween="true" startValue="6,153" endValue="42,153" duration="3" ease="Linear"/>
+    <item time="3" type="Alpha" target="n101_xoe1" tween="true" startValue="1" endValue="0" duration="3" ease="Linear"/>
+    <item time="3" type="Alpha" target="n154_quts" tween="true" startValue="1" endValue="0" duration="3" ease="Linear"/>
+    <item time="3" type="Alpha" target="n174_eh3a" tween="true" startValue="1" endValue="0" duration="3" ease="Linear"/>
+    <item time="3" type="XY" target="n101_xoe1" tween="true" startValue="714,644" endValue="744,644" duration="3" ease="Linear"/>
+    <item time="3" type="XY" target="n154_quts" tween="true" startValue="1084,138" endValue="1113,138" duration="3" ease="Linear"/>
+    <item time="3" type="XY" target="n174_eh3a" tween="true" startValue="42,153" endValue="15,153" duration="3" ease="Linear"/>
+    <item time="7" type="XY" target="n174_eh3a" value="-517,153"/>
+  </transition>
+  <transition name="approach">
+    <item time="0" type="Alpha" target="n101_xoe1" tween="true" startValue="0" endValue="0.5" duration="4"/>
+    <item time="0" type="Alpha" target="n154_quts" value="0"/>
+    <item time="0" type="Alpha" target="n174_eh3a" value="0"/>
+    <item time="0" type="XY" target="n101_xoe1" tween="true" startValue="1000,644" endValue="675,644" duration="6" ease="Linear"/>
+    <item time="0" type="XY" target="n154_quts" value="1300,138"/>
+    <item time="0" type="XY" target="n174_eh3a" value="-209,153"/>
+    <item time="4" type="Alpha" target="n101_xoe1" tween="true" startValue="0.5" endValue="1" duration="8"/>
+    <item time="5" type="Alpha" target="n154_quts" tween="true" startValue="0" endValue="0.5" duration="5" ease="Linear"/>
+    <item time="5" type="Alpha" target="n174_eh3a" tween="true" startValue="0" endValue="0.5" duration="5" ease="Linear"/>
+    <item time="5" type="XY" target="n154_quts" tween="true" startValue="1300,138" endValue="1074,138" duration="5" ease="Linear"/>
+    <item time="5" type="XY" target="n174_eh3a" tween="true" startValue="-209,153" endValue="30,153" duration="5" ease="Linear"/>
+    <item time="6" type="XY" target="n101_xoe1" tween="true" startValue="675,644" endValue="744,644" duration="4" ease="Back.Out"/>
+    <item time="10" type="Alpha" target="n154_quts" tween="true" startValue="0.5" endValue="1" duration="6" ease="Linear"/>
+    <item time="10" type="Alpha" target="n174_eh3a" tween="true" startValue="0.5" endValue="1" duration="6" ease="Linear"/>
+    <item time="10" type="XY" target="n154_quts" tween="true" startValue="1074,138" endValue="1113,138" duration="6" ease="Back.Out"/>
+    <item time="10" type="XY" target="n174_eh3a" tween="true" startValue="30,153" endValue="6,153" duration="6" ease="Back.Out"/>
+  </transition>
+  <transition name="a_personalboss">
+    <item time="0" type="Alpha" target="n101_xoe1" tween="true" startValue="0" endValue="0.5" duration="4"/>
+    <item time="0" type="Alpha" target="n154_quts" value="0"/>
+    <item time="0" type="XY" target="n101_xoe1" tween="true" startValue="1000,644" endValue="700,644" duration="6" ease="Linear"/>
+    <item time="0" type="XY" target="n154_quts" value="1341,138"/>
+    <item time="4" type="Alpha" target="n101_xoe1" tween="true" startValue="0.5" endValue="1" duration="8"/>
+    <item time="5" type="Alpha" target="n154_quts" tween="true" startValue="0" endValue="0.5" duration="5" ease="Linear"/>
+    <item time="5" type="XY" target="n154_quts" tween="true" startValue="1341,138" endValue="1027,138" duration="5" ease="Linear"/>
+    <item time="6" type="XY" target="n101_xoe1" tween="true" startValue="700,644" endValue="744,644" duration="4" ease="Back.Out"/>
+    <item time="10" type="Alpha" target="n154_quts" tween="true" startValue="0.5" endValue="1" duration="6" ease="Linear"/>
+    <item time="10" type="XY" target="n154_quts" tween="true" startValue="1027,138" endValue="1113,138" duration="6" ease="Back.Out"/>
+  </transition>
+  <transition name="a_worldboss">
+    <item time="0" type="Alpha" target="n101_xoe1" tween="true" startValue="0" endValue="0.5" duration="4"/>
+    <item time="0" type="Alpha" target="n154_quts" value="0"/>
+    <item time="0" type="XY" target="n101_xoe1" tween="true" startValue="1000,644" endValue="699,644" duration="6" ease="Linear"/>
+    <item time="0" type="XY" target="n154_quts" value="1300,138"/>
+    <item time="4" type="Alpha" target="n101_xoe1" tween="true" startValue="0.5" endValue="1" duration="8"/>
+    <item time="5" type="Alpha" target="n154_quts" tween="true" startValue="0" endValue="0.5" duration="5" ease="Linear"/>
+    <item time="5" type="XY" target="n154_quts" tween="true" startValue="1300,138" endValue="1071,138" duration="5" ease="Linear"/>
+    <item time="6" type="XY" target="n101_xoe1" tween="true" startValue="699,644" endValue="744,644" duration="4" ease="Back.Out"/>
+    <item time="10" type="Alpha" target="n154_quts" tween="true" startValue="0.5" endValue="1" duration="6" ease="Linear"/>
+    <item time="10" type="XY" target="n154_quts" tween="true" startValue="1071,138" endValue="1113,138" duration="6" ease="Back.Out"/>
+  </transition>
+</component>

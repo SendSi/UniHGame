@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="750,1334" opaque="false" designImageAlpha="20" designImageLayer="1">
+  <controller name="gameCtrl" pages="0,,1," selected="1">
+    <remark page="0" value="菜单"/>
+    <remark page="1" value="游戏"/>
+  </controller>
+  <displayList>
+    <text id="n175_jn1l" name="timeScoreTxt" xy="565,51" size="134,83" fontSize="54" color="#00ff00" align="center" vAlign="middle" autoSize="none" text="90"/>
+    <component id="n176_jn1l" name="againBtn" src="ig90hz9czq" fileName="_new/comBtn_IconTxt.xml" pkg="2r331opv" xy="237,622" size="263,61">
+      <gearDisplay controller="gameCtrl" pages="1"/>
+      <Button title="重新开始"/>
+    </component>
+    <component id="n177_jn1l" name="quitBtn" src="ig90hz9czq" fileName="_new/comBtn_IconTxt.xml" pkg="2r331opv" xy="241,720" size="269,61">
+      <gearDisplay controller="gameCtrl" pages="1"/>
+      <Button title="退出"/>
+    </component>
+  </displayList>
+  <transition name="quit" options="2"/>
+  <transition name="approach"/>
+  <transition name="a_personalboss"/>
+  <transition name="a_worldboss"/>
+</component>
